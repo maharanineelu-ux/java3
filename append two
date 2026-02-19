@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Read input strings
+        String S1 = sc.nextLine();
+        String S2 = sc.nextLine();
+        
+        // Append S2 to S1
+        String result = S1 + S2;
+        
+        // Print the result
+        System.out.println(result);
+        
+        sc.close();
+    }
+}
