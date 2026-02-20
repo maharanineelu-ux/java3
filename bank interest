@@ -1,0 +1,39 @@
+import java.util.Scanner;
+interface Bank {
+    void getintrestrate();
+}
+class SBI implements Bank {
+    public void getintrestrate() {
+        System.out.print("6.5%");
+    }
+}
+class HDFC implements Bank {
+    public void getintrestrate() {
+        System.out.print("7.0%");
+    }
+}
+class ICICI implements Bank {
+    public void getintrestrate() {
+        System.out.print("6.8%");  }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String Bankname = sc.nextLine();
+        Bank bank;
+        if (Bankname.equals("SBI")) {
+            bank = new SBI();
+        } 
+        else if (Bankname.equals("HDFC")) {
+            bank = new HDFC();
+        } 
+        else if (Bankname.equals("ICICI")) {
+            bank = new ICICI();
+        } 
+        else {
+            System.out.println("Invalid Bank Name");
+            return;
+        }
+        bank.getintrestrate();
+    }
+}
